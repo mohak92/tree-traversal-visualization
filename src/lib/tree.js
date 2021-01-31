@@ -74,6 +74,23 @@ function BinaryTree(val) {
             this.preOrder(node.right);
         }
     };
+
+    // Perform inorder traversal of the tree
+    this.inOrder = function(node = this.root) {
+        if(node === this.root && this.traverseList.left > 0) {
+            this.traverseList = [];
+        }
+        if(node != null) {
+            this.inOrder(node.left);
+            this.traverseList.push(node.node);
+            this.inOrder(node.right);
+        }
+    };
+
+    // Get the list of traversed nodes after calling any traversal api
+    this.getTraversed = function() {
+        return this.traverseList;
+    };
 }
 
 export default BinaryTree;
