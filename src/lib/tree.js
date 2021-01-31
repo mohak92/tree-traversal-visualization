@@ -30,7 +30,38 @@ function BinaryTree(val) {
         const nodePos = this.levelOrderTraverse(node); // Makes use of levelordertraverse api to find the node and insert new node
         const newNode = new Node(val);
         nodePos[dir] = newNode;    
-    }
+    };
+
+    this.levelOrderTraverse = function(search = -1) {
+        // Perform levelorder traversel to return the traversed list or support insertAt api. 
+        // If search=-1 then returns traversed list else return the node that was to be searched.
+        const queue = [];
+        var current = this.root;
+        queue.push(current);
+        
+        if(this.traverseList.length > 0) {
+            this.traverseList = [];
+        }
+
+        while(queue.length > 0) {
+            current = queue.shift();
+            if(current != null) {
+                if(search === -1) {
+                    this.traverseList.push(current.node);
+                }
+                if(current.node === search && search !== -1) {
+                    return current;
+                }
+                if(current.left != null) {
+                    queue.push(current.left);
+                }
+                if(current.right != null) {
+                    queue.push(current.right);
+                }
+            }
+        }
+
+    };
 }
 
 export default BinaryTree;
