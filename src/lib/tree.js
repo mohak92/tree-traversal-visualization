@@ -62,6 +62,18 @@ function BinaryTree(val) {
         }
 
     };
+
+    // Perform preorder traversal of the tree
+    this.preOrder = function(node = this.root) {
+        if(node === this.root && this.traverseList.length > 0) {
+            this.traverseList = [];
+        }
+        if(node != null) {
+            this.traverseList.push(node.node);
+            this.preOrder(node.left);
+            this.preOrder(node.right);
+        }
+    };
 }
 
 export default BinaryTree;
