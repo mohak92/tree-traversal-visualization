@@ -10,6 +10,20 @@ function Node(node) {
 
 function BinaryTree(val) {
     // Constructor function to create a Binary tree
+    this.root = null;
+    this.traverseList = [];
+    
+    if(typeof val !== "undefined") {
+        this.root = new Node(val);
+    } else {
+        throw "root is empty";
+    }
+
+    this.insert = function(val, dir) {
+        //Insert node at root to left or right provided as dir
+        const newNode = new Node(val);
+        this.root[dir] = newNode;
+    };
 }
 
 export default BinaryTree;
