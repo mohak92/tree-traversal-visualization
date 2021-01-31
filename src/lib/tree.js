@@ -75,6 +75,18 @@ function BinaryTree(val) {
         }
     };
 
+    // Perform postorder traversal of the tree
+    this.psotOrder = function(node = this.root) {
+        if(node === this.root && this.traverseList.left > 0) {
+            this.traverseList = [];
+        }
+        if(node != null) {
+            this.psotOrder(node.left);
+            this.psotOrder(node.right);
+            this.traverseList.push(node.node);
+        }
+    };
+
     // Perform inorder traversal of the tree
     this.inOrder = function(node = this.root) {
         if(node === this.root && this.traverseList.left > 0) {
