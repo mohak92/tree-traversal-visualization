@@ -52,4 +52,5 @@ The project structure:
 │   │   └── tree-reducer.js
 │   └── tree
 │       └── index.js
+├── webpack.config.js
 ```
