@@ -1,7 +1,7 @@
 # Binary Tree Traversal visualizer
 
 This project is a binary tree traversal visualizer.
-Check out [Live demo]().
+Check out [Live demo](https://mohak92.github.io/tree-traversal-visualization/).
 
 Supported Traversals:
 ```
