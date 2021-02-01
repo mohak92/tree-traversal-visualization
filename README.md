@@ -24,28 +24,32 @@ You can learn more about these algo's here:
 
 The project structure: 
 ```
-├── public
-│   ├── favicon.ico
-│   ├── index.html
-│   └── manifest.json
+├── LICENSE
 ├── README.md
+├── dist
+│   ├── css
+│   │   └── main.css
+│   └── js
+│       └── bundle.min.js
+├── index.html
+├── package-lock.json
+├── package.json
 ├── src
-│   ├── App.css
-│   ├── App.js
-│   ├── App.test.js
-│   ├── components
-│   │   ├── Options
-│   │   │   ├── option.css
-│   │   │   └── option.js
-│   │   ├── index.js
-│   │   └── Visualizer
-│   │       ├── TraversedList.css
-│   │       ├── TraversedList.js
-│   │       ├── Visualizer.css
-│   │       └── Visualizer.js
-│   ├── index.css
-│   ├── index.js
-│   ├── lib
-│   │   ├── animateNodeInTree.js
-│   │   └── tree.js
+│   ├── actions
+│   │   ├── index.js
+│   │   └── types.js
+│   ├── components
+│   │   └── index.js
+│   ├── containers
+│   │   ├── options.js
+│   │   ├── traversedlist.js
+│   │   └── treediagram.js
+│   ├── index.js
+│   ├── reducers
+│   │   ├── diagram-reducer.js
+│   │   ├── index.js
+│   │   ├── traversed-reducer.js
+│   │   └── tree-reducer.js
+│   └── tree
+│       └── index.js
 ```
